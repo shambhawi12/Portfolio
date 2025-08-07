@@ -929,7 +929,7 @@ body {
   transform: translateZ(5vw);
 }
 #tvBox {
-  cursor: pointer; 
+  cursor: pointer; /* Shows it's clickable */
 }
 
 .tv {
