@@ -14,7 +14,7 @@
 }
 
     body {
-      /* Remove global background - let each page have its own */
+  
       background: #ffffff;
       z-index: -1;
     }
@@ -30,7 +30,6 @@
       top: -5vh;
       left: -1.5vw;
       z-index: 0;
-      /* Clip the spline wrapper to only show within page1 */
       clip-path: inset(0 0 0 0);
     }
 
@@ -45,13 +44,11 @@
       height: 100vh;
       width: 100vw;
       position: relative;
-      /* Add the radial gradient background only to page1 */
       background: radial-gradient(circle at center, #ffffff 0%, #cce6ff 50%, #99ccff 100%);
       background-size: 120% 120%;
       background-repeat: no-repeat;
       background-position: 50% 50%;
       transition: background-position 0.1s ease;
-      /* Ensure page1 content doesn't overflow */
       overflow: hidden;
     }
 
@@ -145,7 +142,6 @@
       }
     }
 
-/* Base structure (ensure this exists too) */
 #spline-wrapper {
   position: absolute;
   z-index: 1;
@@ -331,7 +327,7 @@
   }
 }
 
-/* PAGE 2 - Clean background with no interference from page1 */
+/* PAGE 2 */
 #page2 {
   
       min-height: 100vh;
@@ -340,9 +336,7 @@
       padding: 40px;
       gap: 60px;
       position: relative;
-      /* Clean white background for page2 */
       background: #ecf0f1;
-      /* Ensure page2 is on top */
       z-index: 10;
     }
     #page2 > * {
@@ -351,41 +345,6 @@
 }
 
 
-    /* Cute floating elements */
-    .floating-element {
-      position: absolute;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      opacity: 0.6;
-    }
-
-    .floating-element:nth-child(1) {
-      top: 10%;
-      left: 15%;
-      background: linear-gradient(45deg, #ff9a9e, #fecfef);
-      animation: floatUp 8s infinite ease-in-out;
-    }
-
-    .floating-element:nth-child(2) {
-      top: 30%;
-      right: 20%;
-      background: linear-gradient(45deg, #a8edea, #fed6e3);
-      animation: floatUp 6s infinite ease-in-out 2s;
-    }
-
-    .floating-element:nth-child(3) {
-      bottom: 20%;
-      left: 10%;
-      background: linear-gradient(45deg, #ffecd2, #fcb69f);
-      animation: floatUp 10s infinite ease-in-out 4s;
-    }
-
-    @keyframes floatUp {
-      0%, 100% { transform: translateY(0px) scale(1); }
-      50% { transform: translateY(-30px) scale(1.2); }
-    }
-/* Your existing futuristic-interface styles would go here */
 .futuristic-interface {
   flex: 1;
   max-width: 480px;
@@ -549,7 +508,6 @@
   line-height: 1.7;
 }
 
-/* Enhanced 3D Model with bounce effect */
 .certificate {
   position: relative;
   width: 100%;
@@ -586,8 +544,6 @@
   object-fit: contain;
   z-index: 1;
 }
-
-
 
 /* Floating bounce animation for the entire model container */
 @keyframes modelFloat {
@@ -626,7 +582,6 @@
   height: 4px;
   background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
   z-index: 2;
-  /* Add pulsing effect to the top bar */
   animation: topBarPulse 3s ease-in-out infinite;
 }
 
@@ -738,7 +693,7 @@
       border: 2px solid transparent;
       opacity: 0.7;
       transform: scale(0.9);
-height: auto;                 /* Let it expand */
+height: auto;                 
   max-height: 600px;
     }
 
@@ -834,8 +789,8 @@ height: auto;                 /* Let it expand */
       line-height: 1.6;
       margin-bottom: clamp(15px, 2vh, 20px);
       height: clamp(40px, 6vh, 48px);
-  max-height: none;     /* Allow full height */
-  overflow: visible;    /* Allow all content to be shown */
+  max-height: none;     
+  overflow: visible;    
   display: block;
     }
 

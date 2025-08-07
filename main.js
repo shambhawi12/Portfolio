@@ -16,7 +16,7 @@ let base = (e) => {
 b.addEventListener("pointermove", base);
 
   document.getElementById("tvBox").addEventListener("click", function () {
-    window.location.href = "index.html"; // Redirect to index.html
+    window.location.href = "index.html";
   });
 
 

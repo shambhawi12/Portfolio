@@ -2,8 +2,6 @@
   window.addEventListener("scroll", function () {
     const scrollY = window.scrollY;
     const scrollIndicator = document.getElementById("scrollIndicator");
-
-    // Move the scroll indicator down as user scrolls (but limit it)
     scrollIndicator.style.top = 50 + scrollY * 0.5 + "px";
   });
 // Initialize Locomotive Scroll
@@ -32,11 +30,8 @@ ScrollTrigger.scrollerProxy("#main", {
   },
   pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
 });
-
-// Update ScrollTrigger on Locomotive scroll
 scroll.on("scroll", ScrollTrigger.update);
 
-// Refresh ScrollTrigger when layout updates
 ScrollTrigger.addEventListener("refresh", () => scroll.update());
 ScrollTrigger.refresh();
 
@@ -56,8 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
       function updateSlider() {
         if (isAnimating) return;
         isAnimating = true;
-
-        // Calculate transform position to center the active card
         const cardElement = projectCards[currentProject];
         const cardWidth = cardElement.offsetWidth;
         const gap = parseInt(window.getComputedStyle(projectsContainer).gap);
@@ -68,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         projectsContainer.style.transform = `translateX(${translateX}px)`;
 
-        // Update active states
         projectCards.forEach((card, index) => {
           card.classList.remove('active', 'highlight-glow');
           if (index === currentProject) {
